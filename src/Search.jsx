@@ -34,6 +34,7 @@ export default class Search extends Component {
       .then(response => response.json())
       .then(json => {
         const { results } = json;
+        console.log(results);
         this.setState({
           results,
           artist: json.results[0].artistName,

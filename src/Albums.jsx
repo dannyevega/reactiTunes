@@ -10,15 +10,18 @@ export default class Albums extends Component {
           {results.map((album, idx) => {
             let albumArt = album.artworkUrl100;
             let albumName = album.collectionName;
+            let albumPage = album.collectionViewUrl;
             return (
               <div key={idx} className='album'>
-                <li>
-                  <img
-                    alt='album'
-                    src={albumArt}
-                    className='album-image'
-                  />
-                </li>
+                <a href={albumPage} target='_blank'>
+                  <li>
+                    <img
+                      alt='album'
+                      src={albumArt}
+                      className='album-image'
+                    />
+                  </li>
+                </a>
                 <p className='album-info'>
                   {albumName}
                 </p>              
